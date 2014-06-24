@@ -1,0 +1,46 @@
+<h2>Data Binding - Patterns</h2>
+
+<svg width="600" height="100">
+</svg>
+
+<pre>
+  <code>
+    d3.select("svg").selectAll("circle")
+      .data([20,40,35])
+      .enter()
+      .append("circle")
+      .attr("r", function(d){return d})
+      .attr("cx", function(d,i){return 50+100*i})
+      .attr("cy", 50)
+  </code>
+</pre>
+
+<code>
+  <p id="selectionOutput">
+
+  </p>
+</code>
+
+<ul>
+  <li>Selecting elements that <em>clearly</em> don't exist</li>
+  <li>Empty Selection</li>
+  <li><code>enter()</code> Selection is therefore, all elements</li>
+</ul>
+
+<script type="text/javascript" charset="utf-8" id="run">
+  d3.select($slide).select("svg").selectAll("circle")
+    .data([20,40,35])
+    .enter()
+    .append("circle")
+    .attr("r", function(d){return d})
+    .attr("cx", function(d,i){return 50+100*i})
+    .attr("cy", 50)
+</script>
+
+<script type="text/javascript" charset="utf-8" id="undo">
+  d3.select($slide).selectAll("circle").remove()
+</script>
+
+<aside class="notes">
+
+</aside>
