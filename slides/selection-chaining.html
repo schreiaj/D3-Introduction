@@ -1,0 +1,35 @@
+<h2>Selection - Chaining</h2>
+
+<svg width="600" height="100">
+  <circle cx="40" cy="60" r="20" ></circle>
+  <circle cx="300" cy="60" r="20" ></circle>
+  <circle cx="560" cy="60" r="20" ></circle>
+</svg>
+
+<pre>
+  <code>
+    d3.selectAll("circle").attr("r", 40).classed("selected",true)
+  </code>
+</pre>
+
+<code>
+  <p id="selectionOutput">
+
+  </p>
+</code>
+
+<p>
+  Chaining calls on Selections returns a new Selection
+</p>
+
+<script type="text/javascript" charset="utf-8" id="run">
+  d3.select($slide).selectAll("circle").attr("r", 40).classed("selected",true)
+</script>
+
+<script type="text/javascript" charset="utf-8" id="undo">
+  d3.select($slide).selectAll("circle").attr("r", 20).classed("selected",false)
+</script>
+
+<aside class="notes">
+
+</aside>

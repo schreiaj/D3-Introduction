@@ -1,0 +1,39 @@
+<h2>Getting Started</h2>
+
+
+<div id="d3Sample">
+</div>
+
+<pre>
+  <code>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+        ...
+        <div id="d3Sample">
+        </div>
+        ...
+        <script type="text/javascript" charset="utf-8">
+          d3.select("#d3Sample").append("p").text("Hello World!")
+        </script>
+
+  </code>
+</pre>
+
+<script type="text/javascript" charset="utf-8" id="run">
+    d3.select($slide).select("#d3Sample").selectAll("p").text("Hello World!")
+</script>
+
+<script type="text/javascript" charset="utf-8" id="undo">
+    d3.select($slide).select("#d3Sample").selectAll("p").remove()
+</script>
+
+
+<aside class="notes">
+    <ul>
+      <li>First, add in the d3.js to your html</li>
+      <li>...have an element you're going to manipulate</li>
+      <li>...then append an element</li>
+      <li>...and set the text of it.</li>
+
+    </ul>
+</aside>
