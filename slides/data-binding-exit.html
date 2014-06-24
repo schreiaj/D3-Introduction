@@ -1,4 +1,4 @@
-<h2>Data Binding - Enter</h2>
+<h2>Data Binding - Exit</h2>
 
 <svg width="600" height="100">
   <circle cx="40" cy="50" r="20" ></circle>
@@ -10,29 +10,29 @@
 <pre>
   <!-- <code data-trim> -->
     <span class="fragment highlight-current-red" data-fragment-index="1">circles=d3.selectAll("circle")</span>
-    <span class="fragment highlight-current-red" data-fragment-index="2">  .data([0,1,2,3])</span>
-    <span class="fragment highlight-current-red" data-fragment-index="3">circleEnter = circles.enter()</span>
+    <span class="fragment highlight-current-red" data-fragment-index="2">  .data([0,1])</span>
+    <span class="fragment highlight-current-red" data-fragment-index="3">circleExit = circles.exit()</span>
   <!-- </code> -->
 </pre>
 
 <p>
-  <code class="fragment" data-fragment-index="2">circles > "[object SVGCircleElement],[object SVGCircleElement],[object SVGCircleElement],"</code>
+  <code class="fragment" data-fragment-index="2">circles > "[object SVGCircleElement],[object SVGCircleElement]"</code>
   <br>
-  <code class="fragment" data-fragment-index="3">circleEnter > ",,,[object Object]"</code>
+  <code class="fragment" data-fragment-index="3">circleExit > ",,[object SVGCircleElement]" </code>
 </p>
 
 <ul>
   <li class="fragment" data-fragment-index="1">Create a selection</li>
   <li class="fragment" data-fragment-index="2">For each Element in selection bind data to it</li>
   <li class="fragment" data-fragment-index="2">It becomes <code>circles</code></li>
-  <li class="fragment" data-fragment-index="3">Select all elements that are new in circles</li>
+  <li class="fragment" data-fragment-index="3">Select all elements that are unbound</li>
 </ul>
 
 
 
 <script type="text/javascript" charset="utf-8" id="run">
-  circles = d3.select($slide).selectAll("circle").data([0,1,2,3])
-  circleEnter = circles.enter()
+  circles = d3.select($slide).selectAll("circle").data([0,1])
+  circleExit = circles.exit()
 </script>
 
 <script type="text/javascript" charset="utf-8" id="undo">

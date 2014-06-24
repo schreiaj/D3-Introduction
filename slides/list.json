@@ -13,6 +13,7 @@
     "selection-attributes-from-functions.html",
     "selection-binding-data.html",
     "data-binding-enter.html",
-    "selection-enter.html"
-
+    "selection-enter.html",
+    "data-binding-exit.html",
+    "data-binding-patterns.html"
 ]
