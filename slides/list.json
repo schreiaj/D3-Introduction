@@ -11,5 +11,8 @@
     "selection-attributes.html",
     "selection-chaining.html",
     "selection-attributes-from-functions.html",
-    "selection-binding-data.html"
+    "selection-binding-data.html",
+    "data-binding-enter.html",
+    "selection-enter.html"
+
 ]
