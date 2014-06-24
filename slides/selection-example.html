@@ -7,10 +7,19 @@
 </svg>
 
 <pre>
+    <code id="htmlOutput">
+    </code>
+</pre>
+
+
+<pre>
   <code>
     d3.selectAll("circle").toString()
   </code>
 </pre>
+
+
+
 
 <code>
   <p id="selectionOutput">
@@ -19,11 +28,15 @@
 </code>
 
 <script type="text/javascript" charset="utf-8" id="run">
-    d3.select("#selectionOutput").text(function(){return d3.select(".present").selectAll("circle").toString()})
+    d3.select($slide).select("#selectionOutput").text(function(){return d3.select(".present").selectAll("circle").toString()})
+    d3.select($slide).select("#htmlOutput")
+    .text(function(){
+      return d3.select($slide).select("svg").html().trim()
+    })
 </script>
 
 <script type="text/javascript" charset="utf-8" id="undo">
-    d3.select("#selectionOutput").text("")
+    d3.select($slide).select("#selectionOutput").text("")
 </script>
 
 <aside class="notes">
