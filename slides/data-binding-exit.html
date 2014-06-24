@@ -11,7 +11,9 @@
   <!-- <code data-trim> -->
     <span class="fragment highlight-current-red" data-fragment-index="1">circles=d3.selectAll("circle")</span>
     <span class="fragment highlight-current-red" data-fragment-index="2">  .data([0,1])</span>
-    <span class="fragment highlight-current-red" data-fragment-index="3">circleExit = circles.exit()</span>
+    <span class="fragment highlight-current-red" data-fragment-index="3">circleExit = circles.exit()
+    <span>circleExit.remove()
+    </span>
   <!-- </code> -->
 </pre>
 
@@ -33,6 +35,7 @@
 <script type="text/javascript" charset="utf-8" id="run">
   circles = d3.select($slide).selectAll("circle").data([0,1])
   circleExit = circles.exit()
+  circleExit.remove()
 </script>
 
 <script type="text/javascript" charset="utf-8" id="undo">
