@@ -29,9 +29,10 @@
 
 <script type="text/javascript" charset="utf-8" id="run">
     d3.select($slide).select("#selectionOutput").text(function(){return d3.select(".present").selectAll("circle").toString()})
+    // Grab the svg code and stuff it in a holder.
     d3.select($slide).select("#htmlOutput")
     .text(function(){
-      return d3.select($slide).select("svg").html().trim()
+      return "  "+d3.select($slide).select("svg").html().trim()
     })
 </script>
 
