@@ -1,0 +1,52 @@
+<h2>Selection - Enter</h2>
+
+<svg width="600" height="100">
+  <circle cx="40" cy="50" r="20" ></circle>
+  <circle cx="300" cy="50" r="20" ></circle>
+  <circle cx="560" cy="50" r="20" ></circle>
+</svg>
+
+<pre>
+  <code>
+    d3.selectAll("circle")
+      .data([20,40,35,10])
+      .enter()
+      .append("circle")
+      .attr("cx", function(d,i) {return 50+ 50*i})
+      .attr("cy", 50)
+      .attr("r", function(d){return d})
+      .classed("selected", true)
+  </code>
+</pre>
+
+<code>
+  <p id="selectionOutput">
+
+  </p>
+</code>
+
+<ul>
+  <li class="fragment"><code>enter()</code> is a selection</li>
+  <li class="fragment">It's comprised of all <em>new</em> elements</li>
+  <li class="fragment">Typically used to add new elements</li>
+</ul>
+
+<script type="text/javascript" charset="utf-8" id="run">
+  el = d3.select($slide).select("svg").selectAll("circle")
+    .data([20,40,35,10])
+    .enter()
+    .append("circle")
+    .classed("selected", true)
+    .attr("cy", 50)
+    .attr("cx", function(d,i) {return 50+ 50*i})
+    .attr("r", function(d){return d})
+
+</script>
+
+<script type="text/javascript" charset="utf-8" id="undo">
+  d3.select($slide).selectAll("circle .selected").remove()
+</script>
+
+<aside class="notes">
+
+</aside>
