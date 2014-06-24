@@ -1,0 +1,41 @@
+<h2>Selection - Attributes from Functions</h2>
+
+<svg width="600" height="100">
+  <circle cx="40" cy="60" r="20" ></circle>
+  <circle cx="300" cy="60" r="20" ></circle>
+  <circle cx="560" cy="60" r="20" ></circle>
+</svg>
+
+<pre>
+  <code>
+    d3.selectAll("circle")
+    .attr("cx", function(){return Math.random()*500 + 40})
+    .classed("selected",function(d,i){return i%2 == 0})
+  </code>
+</pre>
+
+<code>
+  <p id="selectionOutput">
+
+  </p>
+</code>
+
+<ul>
+  <li>The second argument for setting attributes can be a function. </li>
+  <li>This argument can take the bound data</li>
+  <li>... and the index of the element.</li>
+</ul>
+
+<script type="text/javascript" charset="utf-8" id="run">
+  d3.select($slide).selectAll("circle")
+  .attr("cx", function(){return Math.random()*500 + 40})
+  .classed("selected",function(d,i){return i%2 == 0})
+</script>
+
+<script type="text/javascript" charset="utf-8" id="undo">
+  // d3.select($slide).selectAll("circle").attr("r", 20).classed("selected",false)
+</script>
+
+<aside class="notes">
+
+</aside>

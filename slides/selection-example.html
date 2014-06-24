@@ -1,0 +1,35 @@
+<h2>Selection Example</h2>
+
+<svg width="600" height="100">
+  <circle cx="40" cy="60" r="20"></circle>
+  <circle cx="300" cy="60" r="20"></circle>
+  <circle cx="560" cy="60" r="20"></circle>
+</svg>
+
+<pre>
+  <code>
+    d3.selectAll("circle").toString()
+  </code>
+</pre>
+
+<code>
+  <p id="selectionOutput">
+
+  </p>
+</code>
+
+<script type="text/javascript" charset="utf-8" id="run">
+    d3.select("#selectionOutput").text(function(){return d3.select(".present").selectAll("circle").toString()})
+</script>
+
+<script type="text/javascript" charset="utf-8" id="undo">
+    d3.select("#selectionOutput").text("")
+</script>
+
+<aside class="notes">
+  I'm stealing this example from Mike Bostock, the creator of D3.
+
+  Given 3 circles, what happens when we select all of them?
+
+  We get 3 SVGCircleElements.
+</aside>

@@ -1,0 +1,8 @@
+{
+  "name": "d3js",
+  "version": "0.0.0",
+  "dependencies": {
+    "reveal.js": "~2.6.1",
+    "d3": "~3.4.8"
+  }
+}
