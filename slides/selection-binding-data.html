@@ -1,4 +1,4 @@
-<h2>Selection - Chaining</h2>
+<h2>Selection - Binding Data</h2>
 
 <svg width="600" height="100">
   <circle cx="40" cy="60" r="20" ></circle>
@@ -9,8 +9,8 @@
 <pre>
   <code>
     d3.selectAll("circle")
-      .attr("r", 40)
-      .classed("selected",true)
+      .data([20,40,35])
+      .attr("r", function(d){return d})
   </code>
 </pre>
 
@@ -20,12 +20,16 @@
   </p>
 </code>
 
-<p>
-  Chaining calls on Selections returns a new Selection
-</p>
+<ul>
+  <li class="fragment">Data is an array of elements</li>
+  <li class="fragment">These are bound to the selection</li>
+  <li class="fragment">Can be referenced as the first arg to attr functions</li>
+</ul>
 
 <script type="text/javascript" charset="utf-8" id="run">
-  d3.select($slide).selectAll("circle").attr("r", 40).classed("selected",true)
+  d3.select($slide).selectAll("circle")
+  .data([20,40,35])
+  .attr("r", function(d){return d})
 </script>
 
 <script type="text/javascript" charset="utf-8" id="undo">

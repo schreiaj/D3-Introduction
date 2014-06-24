@@ -7,7 +7,12 @@
 </svg>
 
 <pre>
-    <code id="htmlOutput">
+    <code>
+      <svg width="600" height="100">
+        <circle cx="40" cy="60" r="20"></circle>
+        <circle cx="300" cy="60" r="20"></circle>
+        <circle cx="560" cy="60" r="20"></circle>
+      </svg>
     </code>
 </pre>
 
@@ -29,11 +34,6 @@
 
 <script type="text/javascript" charset="utf-8" id="run">
     d3.select($slide).select("#selectionOutput").text(function(){return d3.select(".present").selectAll("circle").toString()})
-    // Grab the svg code and stuff it in a holder.
-    d3.select($slide).select("#htmlOutput")
-    .text(function(){
-      return "  "+d3.select($slide).select("svg").html().trim()
-    })
 </script>
 
 <script type="text/javascript" charset="utf-8" id="undo">
