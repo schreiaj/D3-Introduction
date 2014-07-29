@@ -1,0 +1,50 @@
+<h2>Transitions</h2>
+
+<svg width="600" height="100">
+  <circle cx="40" cy="50" r="20" ></circle>
+  <circle cx="300" cy="50" r="20" ></circle>
+  <circle cx="560" cy="50" r="20" ></circle>
+</svg>
+
+
+<pre>
+  <code>
+    d3.select("svg").selectAll("circle")
+      .transition()
+      .duration(1000)
+      .attr("r", function(d){return 40*Math.random()})
+  </code>
+</pre>
+
+<code>
+  <p id="selectionOutput">
+
+  </p>
+</code>
+
+<ul>
+  <li class="">Selections have <code>transition</code> function</li>
+  <li class="fragment">Also a <code>duration</code> function</li>
+  <li class="fragment">And a <code>delay</code> function</li>
+  <li class="fragment">Changing attributes will transition smoothly over duration</li>
+  <li class="fragment">Assuming values existed previously</li>
+
+
+</ul>
+
+<script type="text/javascript" charset="utf-8" id="run">
+  window.callback = setInterval(function(){
+  d3.select($slide).select("svg").selectAll("circle")
+    .transition().duration(1000)
+    .attr("r", function(d){return 40*Math.random()})
+  }, 2000)
+</script>
+
+<script type="text/javascript" charset="utf-8" id="undo">
+  clearInterval(window.callback)
+  d3.select($slide).selectAll("circle").attr("r", 20)
+</script>
+
+<aside class="notes">
+
+</aside>

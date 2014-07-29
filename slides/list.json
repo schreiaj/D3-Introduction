@@ -15,5 +15,15 @@
     "data-binding-enter.html",
     "selection-enter.html",
     "data-binding-exit.html",
-    "data-binding-patterns.html"
+    "data-binding-patterns.html",
+    "helpful-utilities.html",
+    "transitions.html",
+    "transitions-chaining.html",
+    "svg-path-generation.html",
+    "getting-data.html",
+    "other-utilities.html",
+    "wrappers.html",
+    "when-to-use.html",
+    "when-not-to-use.html",
+    "questions.html"
 ]
